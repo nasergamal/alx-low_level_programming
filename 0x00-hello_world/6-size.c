@@ -22,7 +22,7 @@ float fl;
 
 printf("Size of a char: %lu byte(s)\n", sizeof(ch));
 
-printf("Size of a int: %lu byte(s)\n", sizeof(in));
+printf("Size of an int: %lu byte(s)\n", sizeof(in));
 
 printf("Size of a long int: %lu byte(s)\n", sizeof(lin));
 
