@@ -24,7 +24,7 @@ for (m = '0'; m <= '9'; m++)
 {
 for (v = '0'; v <= '9'; v++)
 {
-if (n == m && b == v || n + b > m + v || n == v && m == b)
+if ((n == m && b == v) || (n + b > m + v) || (n == v && m == b))
 continue;
 
 putchar(n);
