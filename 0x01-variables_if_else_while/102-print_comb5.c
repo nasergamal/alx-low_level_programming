@@ -15,37 +15,28 @@ int main(void)
 {
 int m, n, b, v;
 
-for (n = '0'; n <= '9'; n++)
+for (n = 0; n <= 98; n++)
 {
-for (b = '0'; b <= '9'; b++)
+b = n % 10;
+for (m = n + 1; m <= 99; m++)
 {
+v = m % 10;
+putchar(n / 10 + '0');
 
-for (m = '0'; m <= '9'; m++)
-{
-for (v = '0'; v <= '9'; v++)
-{
-if ((n == m && b == v) || (n + b > m + v)
-|| ((n + b < m + v) && (b > m) && (n < m)))
-continue;
-
-putchar(n);
-
-putchar(b);
+putchar (b + '0');
 
 putchar(' ');
 
-putchar(m);
+putchar(m / 10 + '0');
 
-putchar(v);
+putchar (v + '0');
 
-if (n == '9' && b == '8' && m == '9' && v == '9')
+if (n == 98 &&  m == 99)
 continue;
 
 putchar(',');
 
 putchar(' ');
-}
-}
 }
 }
 putchar('\n');
