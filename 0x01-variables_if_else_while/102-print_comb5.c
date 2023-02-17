@@ -37,6 +37,9 @@ putchar(m);
 
 putchar(v);
 
+if (n == '9' && b == '7' && m == '9')
+continue;
+
 putchar(',');
 
 putchar(' ');
