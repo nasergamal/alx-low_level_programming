@@ -14,10 +14,11 @@ int print_last_digit(int n)
 {
 int r;
 
-
 r = n % 10;
 
-_putchar("%u", abs(r));
+r = abs(r)
+
+_putchar(r);
 
 return (r);
 }
