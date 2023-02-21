@@ -15,18 +15,18 @@ int r;
 
 if (n > 0)
 {
-r = 1;
 putchar('+');
+r = 1;
 }
 else if (n < 0)
 {
-r = 1;
 putchar('-');
+r = 1;
 }
 else
 {
-r = 0;
 putchar('0');
+r = 0;
 }
 return (r);
 }
