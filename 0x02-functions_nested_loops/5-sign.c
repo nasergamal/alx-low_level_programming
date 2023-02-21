@@ -15,16 +15,16 @@ int r;
 char s;
 
 if (n > 0)
-r = 1;
+r = '1';
 s = '+';
 
 else if (n < 0)
-r = 1;
+r = '1';
 s = '-';
 
 else
-r = 0;
-s = 0;
+r = '0';
+s = '0';
 
-return (s, r);
+return (s+r);
 }
