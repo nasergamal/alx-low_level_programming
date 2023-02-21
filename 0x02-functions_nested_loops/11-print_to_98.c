@@ -10,7 +10,7 @@
  * Return: count to ninty eight
  */
 
-int print_to_98(int n)
+void print_to_98(int n)
 {
 int m, v;
 if (n < 98)
@@ -51,4 +51,4 @@ putchar(n / 10);
 putchar(n % 10);
 putchar('\n');
 }
-return (0); }
+}
