@@ -10,11 +10,11 @@
  * Return: Truth
  */
 
-int _abs(int)
+int _abs(int* int)
 {
 int r;
 
-r = abs(int* int);
+r = abs(int);
 
 return (r);
 }
