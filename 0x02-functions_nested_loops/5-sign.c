@@ -28,7 +28,7 @@ else
 s = '0';
 r = 0;
 }
-putchar(s);
+printf(s);
 
 return (r);
 }
