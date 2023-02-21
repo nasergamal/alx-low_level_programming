@@ -19,12 +19,12 @@ for (; n < 98; n++)
 {
 if (n > 10 && n < -10)
 {
-putchar(n / 10 + '0');
-putchar(n % 10 + '0');
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
 }
 else
 {
-putchar(n + '0');
+_putchar(n + '0');
 }}}
 else if (n > 98)
 {
@@ -34,21 +34,21 @@ if (n >= 100)
 {
 v = n % 10;
 n = n / 10;
-putchar(n / 10 + '0');
-putchar(n % 10 + '0');
-putchar(v + '0');
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
+_putchar(v + '0');
 }
 else if (n < 100 && n > 98)
 {
-putchar(n / 10 + '0');
-putchar(n % 10 + '0');
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
 }
-putchar(',');
-putchar(' ');
+_putchar(',');
+_putchar(' ');
 }
 if (n == 98)
-putchar(n / 10);
-putchar(n % 10);
-putchar('\n');
+_putchar(n / 10);
+_putchar(n % 10);
+_putchar('\n');
 }
 }
