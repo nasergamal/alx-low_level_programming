@@ -12,23 +12,18 @@
 int print_sign(int n)
 {
 int r;
-char s;
 if (n > 0)
 {
-s = '+';
 r = 1;
 }
 else if (n < 0)
 {
-s = '-';
-r = 1;
+r *= -1
 }
 else
 {
-s = '0';
 r = 0;
 }
-printf("%c", s);
 
 return (r);
 }
