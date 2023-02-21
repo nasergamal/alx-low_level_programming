@@ -16,18 +16,18 @@ char s;
 
 if (n > 0)
 {
-r = '1';
-s = '+';
+r = 1
+putchar('+');
 }
 else if (n < 0)
 {
-r = '1';
-s = '-';
+r = 1;
+putchar('-');
 }
 else
 {
-r = '0';
-s = '0';
+r = 0;
+putchar('0');
 }
-return (s + r);
+return (r);
 }
