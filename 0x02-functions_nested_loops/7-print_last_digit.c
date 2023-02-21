@@ -17,7 +17,7 @@ int r;
 
 r = n % 10;
 
-_putchar("%u" + absu(r));
+_putchar("%u", abs(r));
 
 return (r);
 }
