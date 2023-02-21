@@ -17,7 +17,7 @@ if (n < 98)
 {
 for (; n < 98; n++)
 {
-if (n > 10 && n < -10)
+if (n > 10 || n < -10)
 {
 _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
@@ -38,7 +38,7 @@ _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
 _putchar(v + '0');
 }
-else if (n < 100 && n > 98)
+else if (n < 100 || n > 98)
 {
 _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
