@@ -15,8 +15,9 @@ char i;
 for (n = 0; i <= 9; n++)
 {
 for (i = 'a'; i <= 'z'; i++)
+{
 putchar(i);
-
+}
 putchar('\n');
 }
 }
