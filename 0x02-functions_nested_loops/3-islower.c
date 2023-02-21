@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-#include "main."
+#include "main.h"
 /**
  * _islower - determine letters case
  * @c: the letter to be identified
