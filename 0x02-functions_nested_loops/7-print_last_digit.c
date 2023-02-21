@@ -16,7 +16,7 @@ int r;
 
 r = n % 10;
 
-r = abs(r)
+r = abs(r);
 
 _putchar(r);
 
