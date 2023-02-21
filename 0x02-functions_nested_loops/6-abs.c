@@ -3,7 +3,7 @@
 
 /**
  * _abs - determine absolute value
- * @int: the number under investigation
+ * @n: the number under investigation
  *
  * Description: find the absolute truth about the number
  *
