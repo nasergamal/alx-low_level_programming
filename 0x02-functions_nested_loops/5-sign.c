@@ -29,5 +29,5 @@ else
 r = '0';
 s = '0';
 }
-return (s+r);
+return (s + r);
 }
