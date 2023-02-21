@@ -17,7 +17,7 @@ n = abs(n);
 
 r = n % 10;
 
-_putchar("%d", r);
+_putchar(r + '0');
 
 return (r);
 }
