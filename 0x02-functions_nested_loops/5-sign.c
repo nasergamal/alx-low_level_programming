@@ -28,7 +28,7 @@ else
 s = '0';
 r = 0;
 }
-printf('%c', s);
+printf("%c", s);
 
 return (r);
 }
