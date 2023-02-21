@@ -10,11 +10,11 @@
  * Return: Truth
  */
 
-int _abs(int)
+int _abs(int n)
 {
 int r;
 
-r = abs(r);
+r = abs(n);
 
 return (r);
 }
