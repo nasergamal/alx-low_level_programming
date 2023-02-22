@@ -19,11 +19,11 @@ while (z < 4000000)
 
 z = x + y;
 x = y;
-y = y + z;
+y = z;
 
 if (z % 2 == 0)
 s += z;
 }
-printf("%i\n:x", s);
+printf("%i\n", s);
 return (0);
 }
