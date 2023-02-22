@@ -24,6 +24,7 @@ printf("%d, %d, ", 1, 2);
 }
 else if (i == 24)
 printf("%ld, %ld", x, y);
+_putchar('\n');
 else
 printf("%ld, %ld, ", x, y);
 y = y + z;
