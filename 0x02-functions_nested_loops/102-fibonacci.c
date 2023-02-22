@@ -10,14 +10,15 @@
 
 int main(void)
 {
-int x, y, i;
-x = 0, y = 1;
+int x, y, z, i;
+x = 0, y = 1, z = 2;
 
 for (i = 0; i < 50; i++)
 {
 
 x = y;
-y = x + y;
+y = z;
+z = x + y;
 
 printf("%d, %d, ", x, y);
 }
