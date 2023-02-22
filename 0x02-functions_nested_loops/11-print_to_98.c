@@ -15,6 +15,7 @@ void print_to_98(int n)
 if (n < 98)
 {
 for (; n <= 98; n++)
+{
 if (n < 0)
 {m = abs(n);
 _putchar('-'); }
@@ -29,7 +30,7 @@ putchar(' '); }
 else
 {_putchar(m + '0');
 _putchar(',');
-_putchar(' '); }}
+_putchar(' '); }}}
 else if (n > 98)
 {
 for (; n > 98; n--)
