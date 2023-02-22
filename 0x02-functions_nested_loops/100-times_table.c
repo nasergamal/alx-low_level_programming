@@ -31,7 +31,7 @@ _putchar(' ');
 _putchar(' ');
 _putchar(d + '0');
 }
-else if (d > 10 && d < 100)
+else if (d >= 10 && d < 100)
 {
 _putchar(' ');
 _putchar(d / 10 + '0');
