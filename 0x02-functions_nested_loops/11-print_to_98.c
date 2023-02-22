@@ -23,5 +23,5 @@ printf("%i ", n);
 n--;
 }
 printf("98");
-printf('\n');
+putchar('\n');
 }
