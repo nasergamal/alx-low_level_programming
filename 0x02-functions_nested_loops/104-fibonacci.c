@@ -16,13 +16,13 @@ x = 0, y = 1, z = 2, s = 0;
 while (s < 24)
 {
 if (s > 0 && s < 23)
-printf("%d, %d, " x, y);
+printf("%d, %d, ", x, y);
 
-else if (s = 0)
-printf("%d, %d, " 1, 2);
+else if (s == 0)
+printf("%d, %d, ", 1, 2);
 
 else 	
-printf("%d, %d\n" x, y); 
+printf("%d, %d\n", x, y); 
 
 x = y;
 y = z;
