@@ -13,7 +13,7 @@ long int x, y, z;
 int s;
 x = 1, y = 2, z = 2, s = 0;
 
-while (s < 24)
+while (s < 47)
 {
 if (s < 23)
 printf("%ld, %ld, ", x, y);
