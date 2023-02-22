@@ -11,12 +11,14 @@
 int main(void)
 {
 int x, y, z, i;
-x = 1, y = 2;
+x = 0, y = 1, z = 2;
 
 for (i = 0; i < 50; i++)
 {
-z = x + y;
-printf("%d, %d, ", y, z);
+z = x + y
+x = y
+y = z
+printf("%d, %d, ", x, y);
 x = y;
 y = z;
 }
