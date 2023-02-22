@@ -10,7 +10,7 @@
 
 int main(void)
 {
-long int x, y, z, i, s;
+long int x, y, z, s;
 
 x = 1, y = 2, z = 2, s = 0;
 
