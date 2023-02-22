@@ -42,5 +42,6 @@ y1 += z1;
 y2 += z2;
 s++;
 }
+putchar('\n')
 return (0);
 }
