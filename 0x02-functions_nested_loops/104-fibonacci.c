@@ -33,7 +33,7 @@ z2 = z % n;
 
 while (s < 49)
 {
-printf(", %lu%lu", x1+ x2 / n, x2 % n);
+printf(", %lu%lu", x1 + x2 / n, x2 % n);
 printf(", %lu%lu", y1 + y2 / n, y2 % n);
 
 
