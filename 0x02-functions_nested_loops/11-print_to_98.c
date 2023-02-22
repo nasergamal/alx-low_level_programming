@@ -13,7 +13,8 @@
 void print_to_98(int n)
 {int m, v;
 if (n < 98)
-{for (; n <= 98; n++)
+{
+for (; n <= 98; n++)
 if (n < 0)
 {m = abs(n);
 _putchar('-'); }
@@ -30,8 +31,10 @@ else
 _putchar(',');
 _putchar(' '); }}
 else if (n > 98)
-{for (; n > 98; n--)
-{if (n >= 100)
+{
+for (; n > 98; n--)
+{
+if (n >= 100)
 {v = n % 10;
 m = n / 10;
 _putchar(n / 100 + '0');
@@ -45,4 +48,4 @@ _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
 if (n == 98)
 _putchar('\n');
-continue; }}}}}
+continue; }}}}
