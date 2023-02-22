@@ -22,21 +22,11 @@ if (z % 2 == 0)
 s += z;
 }
 z = x + y;
-if (i == 0)
-{
-printf("%d, %d, ", 1, 2);
-}
-else if (i == 24)
-{
-printf("%ld, %ld", x, y);
-putchar('\n');
-}
-else
-{
-printf("%ld, %ld, ", x, y);
-}
+
 y = y + z;
 x = z;
 }
+printf("%ld", s)
+putchar('\n');
 return (0);
 }
