@@ -16,11 +16,11 @@ x = 0, y = 1, z = 2;
 for (i = 0; i < 50; i++)
 {
 
-x = y;
-y = z;
 z = x + y;
 
 printf("%d, %d, ", x, y);
+y = y + z;
+x = z;
 }
 return (0);
 }
