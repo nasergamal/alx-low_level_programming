@@ -11,7 +11,7 @@ int main(void)
 {
 unsigned long int x, y, z, x1, x2, y1, y2, z1, z2;
 int s, n;
-x = 1, y = 2, z = 2, s = 0, n = 100000000;
+x = 1, y = 2, z = 2, s = 0, n = 1000000000;
 
 while (s < 45)
 {
