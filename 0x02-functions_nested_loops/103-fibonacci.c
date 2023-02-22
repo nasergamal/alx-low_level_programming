@@ -12,7 +12,7 @@ int main(void)
 {
 int x, y, z, s;
 
-x = 1, y = 2, z = 2, s = 0;
+x = 0, y = 1, z = 2, s = 0;
 
 while (z < 4000000)
 {
