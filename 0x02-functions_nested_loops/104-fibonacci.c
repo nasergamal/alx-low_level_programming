@@ -15,7 +15,10 @@ x = 1, y = 2, z = 2, s = 0, n = 100000000;
 
 while (s < 45)
 {
+if (s < 44)
 printf("%lu, %lu, ", x, y);
+else
+printf("%lu, %lu", x, y);
 z = x + y;
 x = z;
 y += z;
