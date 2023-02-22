@@ -10,7 +10,8 @@
 
 int main(void)
 {
-int x, y, z, i;
+long int x, y, z, i;
+
 x = 1, y = 2, z = 3;
 
 for (i = 0; i < 50; i++)
