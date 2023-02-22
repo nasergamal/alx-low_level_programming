@@ -24,7 +24,6 @@ y = y + z;
 if (z % 2 == 0)
 s += z;
 }
-printf("%d", s);
-putchar('\n');
+printf("%i\n:x", s);
 return (0);
 }
