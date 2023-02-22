@@ -21,6 +21,7 @@ if (i == 0)
 {
 printf("%d, %d, ", 1, 2);
 }
+else
 printf("%d, %d, ", x, y);
 y = y + z;
 x = z;
