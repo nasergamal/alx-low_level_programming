@@ -11,13 +11,16 @@
 int main(void)
 {
 int x, y, z, i;
-x = 0, y = 1, z = 2;
+x = 1, y = 2, z = 3;
 
 for (i = 0; i < 50; i++)
 {
 
 z = x + y;
-
+if (i = 0)
+{
+printf("%d, %d, ", 1, 2);
+}
 printf("%d, %d, ", x, y);
 y = y + z;
 x = z;
