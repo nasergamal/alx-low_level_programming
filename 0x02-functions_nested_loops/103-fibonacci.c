@@ -14,17 +14,15 @@ long int x, y, z, i, s;
 
 x = 1, y = 2, z = 2, s = 0;
 
-for (i = 0; i < 25; i++)
+while (z < 4000000)
 {
-if (z < 4000000)
-{
-/*if (z % 2 == 0)*/
-s += z;
-}
-z = x + y;
 
+z = x + y;
+x = y;
 y = y + z;
-x = z;
+
+if (z % 2 == 0)
+s += z;
 }
 printf("%ld", s);
 putchar('\n');
