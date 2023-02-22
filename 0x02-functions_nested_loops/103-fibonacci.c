@@ -26,7 +26,7 @@ z = x + y;
 y = y + z;
 x = z;
 }
-printf("%ld", s)
+printf("%ld", s);
 putchar('\n');
 return (0);
 }
