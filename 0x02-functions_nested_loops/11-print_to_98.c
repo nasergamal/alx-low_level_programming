@@ -21,11 +21,13 @@ if (n > 10 || n < -10)
 {
 _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
-}
+_putchar(',');
+_putchar(' '); }
 else
 {
-_putchar(n + '0');
-}}}
+_putchar(n + '0'); 
+_putchar(',');
+_putchar(' '); }}}
 else if (n > 98)
 {
 for (; n > 98; n--)
@@ -36,17 +38,15 @@ v = n % 10;
 n = n / 10;
 _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
-_putchar(v + '0');
-}
+_putchar(v + '0'); }
 else if (n < 100 || n > 98)
 {
 _putchar(n / 10 + '0');
-_putchar(n % 10 + '0');
-}}}
+_putchar(n % 10 + '0'); }}}
 if (n == 98)
 {_putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
-_putchar('\n');}
+_putchar('\n'); }
 else
 _putchar(',');
 _putchar(' '); }
