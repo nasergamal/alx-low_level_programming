@@ -14,7 +14,7 @@ long int x, y, z, i;
 
 x = 1, y = 2, z = 3;
 
-for (i = 0; i < 50; i++)
+for (i = 0; i < 30; i++)
 {
 
 z = x + y;
