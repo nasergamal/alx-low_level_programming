@@ -20,8 +20,6 @@ x = y;
 y = x + y;
 
 printf("%d, %d, ", x, y);
-x = y;
-y = z;
 }
 return (0);
 }
