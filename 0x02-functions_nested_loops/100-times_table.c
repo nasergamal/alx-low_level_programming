@@ -24,22 +24,22 @@ d = m * v;
 if (v == 0)
 {
 _putchar(d + '0');
-_putchar(',')
+_putchar(',');
 }
-elseif(d < 10)
+else if (d < 10)
 {
 _putchar(' ');
 _putchar(' ');
 _putchar(d + '0');
 }
-elseif(d > 10 && d < 100)
+else if (d > 10 && d < 100)
 {
 _putchar(' ');
 _putchar(d / 10 + '0');
 _putchar(d % 10 + '0');
 
 }
-elseif(d >= 100)
+else if (d >= 100)
 {
 _putchar(d / 100 + '0');
 _putchar((d / 10) % 10 + '0');
@@ -50,5 +50,6 @@ if (v < n)
 _putchar(' ');
 _putchar(';');
 }
+else
 _putchar('\n');
 }}}
