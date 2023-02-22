@@ -12,7 +12,6 @@
 void print_times_table(int n)
 {
 int m, v, d;
-
 if (n > 15 || n < 0)
 return;
 
@@ -23,20 +22,17 @@ for (v = 0; v <= n; v++)
 d = m * v;
 if (v == 0)
 {
-_putchar(d + '0');
-}
+_putchar(d + '0'); }
 else if (d < 10)
 {
 _putchar(' ');
 _putchar(' ');
-_putchar(d + '0');
-}
+_putchar(d + '0'); }
 else if (d >= 10 && d < 100)
 {
 _putchar(' ');
 _putchar(d / 10 + '0');
 _putchar(d % 10 + '0');
-
 }
 else if (d >= 100)
 {
