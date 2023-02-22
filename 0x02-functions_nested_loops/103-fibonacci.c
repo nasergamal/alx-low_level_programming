@@ -10,7 +10,7 @@
 
 int main(void)
 {
-long int x, y, z, s;
+int x, y, z, s;
 
 x = 1, y = 2, z = 2, s = 0;
 
@@ -24,7 +24,7 @@ y = y + z;
 if (z % 2 == 0)
 s += z;
 }
-printf("%ld", s);
+printf("%d", s);
 putchar('\n');
 return (0);
 }
