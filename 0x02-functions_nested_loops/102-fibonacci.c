@@ -12,9 +12,9 @@ int main(void)
 {
 int x, y, z, i;
 x = 1, y = 2;
-z = x + y;
 
-for (i = 0; i < 50; i++
+for (i = 0; i < 50; i++)
+z = x + y;
 printf("%d, %d,", x, y);
 x = y;
 y = z;
