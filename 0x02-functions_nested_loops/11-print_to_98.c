@@ -15,8 +15,8 @@ void print_to_98(int n)
 if (n < 98)
 {for (; n < 98; n++)
 if (n < 0)
-{n = abs(n)
-_putchar('-') }
+{n = abs(n);
+_putchar('-'); }
 {if (n >= 10 || n <= -10)
 {putchar(n / 10 + '0');
 putchar(n % 10 + '0');
