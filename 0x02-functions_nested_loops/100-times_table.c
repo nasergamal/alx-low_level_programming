@@ -10,10 +10,10 @@
  */
 void print_times_table(int n);
 {
+int m, v, d;
+
 if (n > 15 || n <= 0)
 return;
-
-int m, v, d;
 
 for (m = 0; m <= n; m++)
 {
