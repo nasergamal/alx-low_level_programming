@@ -21,12 +21,14 @@ printf("%d, %d, ", x, y);
 else if (s == 0)
 printf("%d, %d, ", 1, 2);
 
-else 	
-printf("%d, %d\n", x, y); 
+else 
+printf("%d, %d\n", x, y);
 
 x = y;
 y = z;
 z = x + y;
+
+s++
 }
 return (0);
 }
