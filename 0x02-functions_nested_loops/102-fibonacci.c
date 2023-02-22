@@ -15,9 +15,9 @@ x = 0, y = 1, z = 2;
 
 for (i = 0; i < 50; i++)
 {
-z = x + y
-x = y
-y = z
+z = x + y;
+x = y;
+y = z;
 printf("%d, %d, ", x, y);
 x = y;
 y = z;
