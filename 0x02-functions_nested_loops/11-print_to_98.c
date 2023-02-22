@@ -43,10 +43,10 @@ else if (n < 100 || n > 98)
 _putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
 }}}
-_putchar(',');
-_putchar(' ');
 if (n == 98)
-_putchar(n / 10 + '0');
+{_putchar(n / 10 + '0');
 _putchar(n % 10 + '0');
-_putchar('\n');
-}
+_putchar('\n');}
+else
+_putchar(',');
+_putchar(' '); }
