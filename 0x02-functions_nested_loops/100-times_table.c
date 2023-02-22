@@ -13,7 +13,7 @@ void print_times_table(int n)
 {
 int m, v, d;
 
-if (n > 15 || n <= 0)
+if (n > 15 || n < 0)
 return;
 
 for (m = 0; m <= n; m++)
@@ -24,7 +24,6 @@ d = m * v;
 if (v == 0)
 {
 _putchar(d + '0');
-_putchar(',');
 }
 else if (d < 10)
 {
@@ -47,8 +46,8 @@ _putchar(d % 10 + '0');
 }
 if (v < n)
 {
+_putchar(',');
 _putchar(' ');
-_putchar(';');
 }
 else
 _putchar('\n');
