@@ -13,9 +13,9 @@ long int x, y, z;
 int s;
 x = 1, y = 2, z = 2, s = 0;
 
-while (s < 47)
+while (s < 49)
 {
-if (s < 23)
+if (s < 48)
 printf("%ld, %ld, ", x, y);
 
 else 
