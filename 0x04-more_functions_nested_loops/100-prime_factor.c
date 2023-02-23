@@ -19,6 +19,6 @@ int main(void)
 		if (i % m == 0)
 			c = m;
 	}
-	printf("%d", c);
+	printf("%d\n", c);
 	return (0);
 }
