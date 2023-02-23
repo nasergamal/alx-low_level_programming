@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * print_number: Entry point
@@ -18,7 +16,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = abs(n);
+		n *= -1;
 	}
 	else if (n == 0)
 	{
