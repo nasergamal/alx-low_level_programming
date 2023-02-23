@@ -16,7 +16,13 @@ void more_numbers(void)
 	while (c < 10)
 	{
 		for (i = 0; i < 15; i++)
-			_putchar(i + '0');
+		{
+			if (i >= 10)
+			{
+				putchar(i / 10 + '0');
+			}
+			_putchar(i % 10 + '0');
+		}
 		_putchar('\n');
 		c++;
 	}
