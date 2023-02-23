@@ -9,7 +9,7 @@
  * Return: pyramid
  */
 
-void print_triangle(int size);
+void print_triangle(int size)
 {
 	int i, n, m;
 
@@ -22,6 +22,7 @@ void print_triangle(int size);
 	{
 		for (n = size - i; n > 0; n--)
 			_putchar(' ');
+
 		for (m = 1; m <= i; m++)
 			_putchar('#');
 		_putchar('\n');
