@@ -14,7 +14,7 @@ int main(void)
 
 	int c = 0;
 
-	for (m = 1; m < i; m += 2)
+	for (m = 1; m < 100000000; m += 2)
 	{
 		if (i % m == 0)
 			c = m;
