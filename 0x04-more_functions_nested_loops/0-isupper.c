@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
@@ -16,9 +16,7 @@ int _isupper(int c)
 	int r;
 
 	if (isupper(c))
-	{
 		r = 1;
-	}
 	else
 		r = 0;
 return (r);

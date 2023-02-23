@@ -11,14 +11,19 @@
 
 void print_triangle(int size);
 {
-	int i, n = 1;
+	int i, n, m;
 
 	if (size == 0)
-		_putchar('\n');
-	for (i = size; i > 0; i--)
 	{
-		_putchar(" " * (i - 1))
-		_putchar('#' * n)
-		n++
+		_putchar('\n');
+		return;
+	}
+	for (i = 1; i <= size; i++)
+	{
+		for (n = size - i; n > 0; n--)
+			_putchar(' ');
+		for (m = 1; m <= i; m++)
+			_putchar('#');
+		_putchar('\n');
 	}
 }

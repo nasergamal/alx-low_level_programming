@@ -1,25 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
- * _isupper - check upper
+ * _isdigit - check for digit
  * @c: the char in question
  *
- * Description: using std library to determine upper case letters
+ * Description: take a char and determine wether it is a digit or not
  *
  * Return: 0 or 1 based on results
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	int r;
 
-	if (isdigit(cc))
-	{
+	if (isdigit(c))
 		r = 1;
-	}
 	else
-	r = 0;
+		r = 0;
 return (r);
 }
