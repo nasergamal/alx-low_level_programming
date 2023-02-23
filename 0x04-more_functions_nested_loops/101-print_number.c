@@ -12,16 +12,28 @@
 
 void print_number(int n)
 {
+	int m;
+
 	if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
-	}
+	}	
 	else if (n == 0)
-		_putchar(n + '0');
-	while (n > 0)
 	{
-		_putchar(n % 10 + '0');
-		n /= 10;
+		_putchar(n + '0');
+		return;
+	}
+
+	if (n >= 1000)
+		m = 1000;
+	else if (n >= 100 && n < 1000)
+		m = 100;
+	else
+		m = 10;
+	for (; m > 0; m /= 10)
+	{
+		_putchar(n / m + '0');
+		n %= m;
 	}
 }
