@@ -18,13 +18,8 @@ void print_number(int n)
 		_putchar('-');
 		m = -n;
 	}
-	else if (n == 0)
-	{
-		_putchar(n + '0');
-		return;
-	}
 
 	if (m / 10)
-		print_number(m / 10);	
+		print_number(m / 10);
 	_putchar(m % 10 + '0');
 }
