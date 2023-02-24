@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number: Entry point
+ * print_number - Entry point
  * @n: the input to be printed
  *
  * Description: printing numbers using putchar
