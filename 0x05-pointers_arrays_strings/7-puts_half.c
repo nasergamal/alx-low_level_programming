@@ -3,25 +3,25 @@
 
 /**
  * puts_half - divide the string
- * @s: the string to be divided
+ * @str: the string to be divided
  *
  * Description: takes a string and print the 2nd half of it
  *
  * Return: nothing
  */
 
-void puts_half(char *str s)
+void puts_half(char *str)
 {
-	int i, n = strlen(s);
+	int i, n = strlen(str);
 
 	if (n % 2 == 0)
 	{
-		for (i = strlen(s) / 2; i < n; i++)
-			printf("%c", s[i]);
+		for (i = strlen(str) / 2; i < n; i++)
+			printf("%c", str[i]);
 	}
 	else
 	{
-		for (i = strlen(s) / 2; i <= n; i++)
-			printf("%c", s[i]);
+		for (i = strlen(str) / 2; i <= n; i++)
+			printf("%c", str[i]);
 	_putchar('\n');
 }

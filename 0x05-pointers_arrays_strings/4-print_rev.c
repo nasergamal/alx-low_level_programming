@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+#include "main.h"
 /**
  * print_rev - takes a string
  * @s: the string in question
