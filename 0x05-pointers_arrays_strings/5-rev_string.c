@@ -2,15 +2,15 @@
 #include <string.h>
 
 /**
- * print_rev - takes a variable
+ * rev_string - takes a variable
  * @s: the string in question
  *
- * Description: take a string then print it in revers
+ * Description: take a string then print it in reverse
  *
  * Return: nothing
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	char *d = s;
 
