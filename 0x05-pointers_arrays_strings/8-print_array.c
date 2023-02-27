@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * print_array - takes in an array
@@ -18,4 +19,6 @@ void print_array(int *a, int n)
 		printf("%d, ", a[m]);
 	if (n > 2)
 		printf("%d\n", a[m]);
+	else
+		_putchar('\n')
 }
