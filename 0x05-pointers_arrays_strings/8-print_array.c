@@ -20,5 +20,5 @@ void print_array(int *a, int n)
 	if (n > 2)
 		printf("%d\n", a[m]);
 	else
-		_putchar('\n')
+		putchar('\n');
 }
