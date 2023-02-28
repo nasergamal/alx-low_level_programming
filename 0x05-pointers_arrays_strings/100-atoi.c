@@ -19,7 +19,7 @@ int _atoi(char *s)
 		if (isspace(s[i]) || s[i] == '+')
 			continue;
 		else if (s[i] == '-')
-			m++
+			m++;
 		else if (isalpha(s[i]))
 			continue;
 		else if (s[i] >= '0' && s[i] <= '9')
