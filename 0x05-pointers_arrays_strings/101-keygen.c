@@ -11,16 +11,14 @@
 
 int main(void)
 {
-        int i, n, m[100];
+        int i,;
 
         /*time_t t;*/
         srand(time(NULL));
 
         for( i = 0 ; i < 100 ; i++)
         {
-		m[i] = rand() % 84;
-		n += m[i];
-                printf("%d\n", n);
+                printf("%d\n", rand());
         }
 
         return (0);
