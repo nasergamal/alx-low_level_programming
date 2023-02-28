@@ -14,7 +14,7 @@ int main(void)
         int i;
 
         time_t t;
-        srand((unsigned) time(&t));
+        srand((unsigned) time(NULL));
 
         for( i = 0 ; i < 100 ; i++ )
         {
