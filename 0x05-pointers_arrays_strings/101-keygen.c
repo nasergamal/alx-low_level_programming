@@ -18,7 +18,7 @@ int main(void)
 
         for( i = 0 ; i < 100 ; i++ )
         {
-                printf("%d\n", rand());
+                printf("%d\n", rand() % 78);
         }
 
         return (0);
