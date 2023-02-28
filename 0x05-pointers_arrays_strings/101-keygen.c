@@ -18,7 +18,7 @@ int main(void)
 
         for( i = 0 ; i < 100 ; i++)
         {
-		n = rand()
+		n = rand();
                 printf("%d\n", n);
         }
 
