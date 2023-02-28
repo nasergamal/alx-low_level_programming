@@ -14,7 +14,7 @@ int _atoi(char *s)
 {
 	int n, i, m = 0;
 
-	for (i = 0; i < strlen(s); i++)
+	for (i = 0; i != '\0'; i++)
 	{
 		if (isspace(s[i]) || s[i] == '+')
 			continue;
