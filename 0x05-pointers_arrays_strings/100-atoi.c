@@ -28,10 +28,8 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			n = n * 10;
-			n = n - (s[i] - '0');
+			n = n + (s[i] - '0');
 		}
-		else if (n > 0)
-			break;
 	}
 	if (m % 2 != 0)
 		n = -n;
