@@ -28,6 +28,8 @@ int _atoi(char *s)
 			n = n * 10;
 			n = n + (s[i] - '0');
 		}
+		else if (n > 0)
+			break;
 	}
 	if (m % 2 != 0)
 		n = -n;
