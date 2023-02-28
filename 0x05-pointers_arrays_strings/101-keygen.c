@@ -11,12 +11,12 @@
 
 int main(void)
 {
-        int i, n;
+        int i;
 
         time_t t;
         srand((unsigned) time(&t));
 
-        for( i = 0 ; i < n ; i++ )
+        for( i = 0 ; i < 100 ; i++ )
         {
                 printf("%d\n", rand());
         }
