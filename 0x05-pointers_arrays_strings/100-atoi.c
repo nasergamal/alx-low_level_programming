@@ -12,7 +12,7 @@
 
 int _atoi(char *s)
 {
-	int n, i, m = 0;
+	int n = 0, i, m = 0;
 
 	for (i = 0; i != '\0'; i++)
 	{
@@ -20,12 +20,13 @@ int _atoi(char *s)
 			continue;
 		else if (s[i] == '-')
 			m++;
+			continue;
 		else if (isalpha(s[i]))
 			continue;
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			n = n * 10;
-			n = n - (s[i] - '0');
+			n = n + (s[i] - '0');
 		}
 	}
 	if (m % 2 != 0)
