@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * cap_string - capitalize a string
  * @s: the string
@@ -10,19 +9,19 @@
 
 char *cap_string(char *s)
 {
-	int i;
+	int i, n;
+
+	char m[] = {"\n \t,;.!?\"(){}"}
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
-			|| s[i] == ',' || s[i] == ';' || s[i] == '.'
-			|| s[i] == '!' || s[i] == '?' || s[i] == '"'
-			|| s[i] == '(' || s[i] == ')' || s[i] == '{'
-			|| s[i] == '}')
+		for (n = 0; m[n] != '\0'; n++)
 		{
-			i++;
 			if (s[i] >= 'a' && s[i] <= 'z')
-				s[i] = s[i] - 32;
+			{
+				if (s[i - 1] == m[n])
+					s[i] = s[i] - 32;
+			}
 		}
 	}
 	return (s);
