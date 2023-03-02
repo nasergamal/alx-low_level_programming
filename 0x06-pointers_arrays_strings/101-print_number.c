@@ -11,7 +11,7 @@
 
 void print_number(int n)
 {
-	int m;
+	unsigned int m;
 	if (n < 0)
 	{
 		_putchar('-');
