@@ -9,19 +9,21 @@
 
 char *cap_string(char *s)
 {
-	int i, n;
-
-	char m[] = {"\n \t,;.!?\"(){}"};
+	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (n = 0; m[n] != '\0'; n++)
+		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] = s[i] - 32;
+
+		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
+			|| s[i] == ',' || s[i] == ';' || s[i] == '.'
+			|| s[i] == '(' || s[i] == ')' || s[i] == '{'
+			|| s[i] == '}')
 		{
+			i++;
 			if (s[i] >= 'a' && s[i] <= 'z')
-			{
-				if (s[i - 1] == m[n])
-					s[i] = s[i] - 32;
-			}
+				s[i] = s[i] - 32;
 		}
 	}
 	return (s);
