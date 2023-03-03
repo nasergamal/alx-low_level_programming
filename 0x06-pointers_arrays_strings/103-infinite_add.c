@@ -25,8 +25,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			v += n1[n] - '0';
 		if (m >= 0)
 			v += n2[m] - '0';
-	if (n < 0 && m < 0 && v == 0)
-		break;
+		if (n < 0 && m < 0 && v == 0)
+			break;
 
 		e = v / 10;
 		r[c] = (v % 10 + '0');
