@@ -15,6 +15,11 @@ void print_buffer(char *b, int size)
 {
 	int i, n, m;
 
+	if (size <= 0)
+	{
+		printf("\n");
+		return;
+	}
 	for (i = 0; i < size;)
 	{
 		printf("%p:", &b[i]);
