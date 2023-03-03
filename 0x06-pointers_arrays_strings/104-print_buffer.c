@@ -20,15 +20,17 @@ void print_buffer(char *b, int size)
 		printf("\n");
 		return;
 	}
-	for (i = 0; i < size - 2;)
+	for (i = 0; i < size - 1;)
 	{
 		printf("%08x: ", q);
-		for (n = 0; n < 10; n += 2, i += 2)
+		for (n = 0; n < 10; n += 1, i += 1)
 		{
 			if (i < size - 1)
-				printf("%02x%02x ", *(b + i), *(b + i + 1));
+				printf("%02x", *(b + i));
 			else
-				printf("     ");
+				printf("  ");
+			if (i % 2)
+				printf(" ");
 		}
 		for (m = 0, i -= 10; m < 10; m++, i++)
 			if (i >= size)
