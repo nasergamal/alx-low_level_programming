@@ -20,12 +20,12 @@ void print_buffer(char *b, int size)
 		printf("\n");
 		return;
 	}
-	for (i = 0; i < size - 1;)
+	for (i = 0; i < size;)
 	{
 		printf("%08x: ", q);
 		for (n = 0; n < 10; n += 1, i += 1)
 		{
-			if (i < size - 1)
+			if (i < size)
 				printf("%02x", *(b + i));
 			else
 				printf("  ");
