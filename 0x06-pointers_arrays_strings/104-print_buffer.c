@@ -13,7 +13,7 @@
 
 void print_buffer(char *b, int size)
 {
-	int i, n, m, v, q = 0;
+	int i, n, m, q = 0;
 
 	if (size <= 0)
 	{
@@ -22,7 +22,6 @@ void print_buffer(char *b, int size)
 	}
 	for (i = 0; i < size;)
 	{
-		v = (size - q) < 10 ? size - q : 10;
 		printf("08x:", q);
 		for (n = 0; n < 10; n += 2, i += 2)
 		{
