@@ -20,7 +20,7 @@ void print_buffer(char *b, int size)
 		printf("\n");
 		return;
 	}
-	for (i = 0; i < size - 1;)
+	for (i = 0; i < size - 2;)
 	{
 		printf("%08x: ", q);
 		for (n = 0; n < 10; n += 2, i += 2)
