@@ -13,7 +13,7 @@
 
 void print_buffer(char *b, int size)
 {
-	int i, n, m;
+	int i, n, m, v, q = 0;
 
 	if (size <= 0)
 	{
@@ -22,7 +22,8 @@ void print_buffer(char *b, int size)
 	}
 	for (i = 0; i < size;)
 	{
-		printf("%p:", &b[i]);
+		v = (size - q) < 10 ? size - q : 10;
+		printf("08x:", q);
 		for (n = 0; n < 10; n += 2, i += 2)
 		{
 			if (i < size)
@@ -38,5 +39,6 @@ void print_buffer(char *b, int size)
 			else
 				printf("%c", b[i]);
 		putchar('\n');
+		q += 10;
 	}
 }
