@@ -18,7 +18,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	if (n > size_r || m > size_r)
 		return (0);
-	for (n -= 1, m -= 1, c = 0; c < size_r -1; c++, n--, m--)
+	for (n -= 1, m -= 1, c = 0; c < size_r - 1; c++, n--, m--)
 	{
 		v = e;
 		if (n >= 0)
@@ -37,7 +37,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (b = 0, c -= 1; b < c; b++, c--)
 	{
 		n = r[b];
-		r[b] = r[c];	
+		r[b] = r[c];
 		r[c] = n;
 	}
 	return (r);
