@@ -25,10 +25,18 @@ void print_buffer(char *b, int size)
 		printf("%p:", &b[i]);
 		for (n = 0; n < 10; n += 2, i += 2)
 		{
-			printf(" %02x%02x ", b[i], b[i + 1]);
+			if (i < size)
+				printf(" %02x%02x ", b[i], b[i + 1]);
+			else
+				printf("      ");
 		}
 		for (m = 0, i -= 10; m < 10; m++, i++)
-			printf("%c", b[i]);
+			if (i >= size)
+				printf(" ");
+			else if ((b[i] < 32 || b[i] > 126))
+				printf(".");
+			else
+				printf("%c", b[i]);
 		putchar('\n');
 	}
 }
