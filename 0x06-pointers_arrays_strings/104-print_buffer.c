@@ -32,7 +32,7 @@ void print_buffer(char *b, int size)
 		}
 		for (m = 0, i -= 10; m < 10; m++, i++)
 			if (i >= size)
-				printf(" ");
+				break;
 			else if ((b[i] < 32 || b[i] > 126))
 				printf(".");
 			else
