@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 /**
  * print_diagsums - get sums of diagonals

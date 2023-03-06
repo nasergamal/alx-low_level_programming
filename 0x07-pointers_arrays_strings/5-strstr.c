@@ -1,3 +1,4 @@
+#include <stddef.h>
 
 /**
  * _strstr - locates the first occurrence in the string s to any in accept
