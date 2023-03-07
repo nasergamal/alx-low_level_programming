@@ -21,6 +21,6 @@ char *_strchr(char *s, char c)
 			return (&s[i]);
 		if (b == 0)
 			return (NULL);
-		i++
+		i++;
 	}
 }
