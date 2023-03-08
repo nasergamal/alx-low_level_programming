@@ -1,3 +1,4 @@
+#include <string.h>
 
 int pal(char *s, int i, int n, int m);
 
@@ -38,3 +39,4 @@ int pal(char *s, int i, int n, int m)
 		return (pal(s, i, n, m));
 	}
 	return (1);
+}
