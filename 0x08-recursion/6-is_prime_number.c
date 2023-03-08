@@ -30,6 +30,6 @@ int prime(int n, int i)
 	if (n % 2 == 0 || n <= 1 || (n > i && n % i == 0))
 		return (0);
 	if (i == n)
-		return (0);
+		return (1);
 	return (prime(n, i += 2));
 }

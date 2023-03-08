@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * _print_rev_recursion - takes a string and to reverse using recursion
@@ -12,8 +13,10 @@
 void _print_rev_recursion(char *s)
 {
 	if (*s)
-	{
-		_print_rev_recursion(s += 1);
-		printf("%c", *s);
-	}
+		return;
+	
+	_print_rev_recursion(s += 1);
+	s--;
+	_putchar(*s);
+	
 }
