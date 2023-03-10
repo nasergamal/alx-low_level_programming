@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - Entry point
  * @argc: arguments count
@@ -10,26 +9,23 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, res = 0;
+	int i, m, res = 0;
 
-	if (argc == 1)
+	char *n;
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("%d\n", res);
-	}
-	else if (argc == 2)
-		printf("%d\n", atoi(argv[1]));
-	else
-	{
-		for (i = 1; i < argc; i++)
+		n = argv[i];
+		for (m = 0; n[m] != '\0'; m++)
 		{
-			if (*argv[i] < '0' || *argv[i] > '9')
+			if (n[m] < '0' || n[m] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
-		res += atoi(argv[i]);
 		}
-		printf("%d\n", res);
+		res += atoi(argv[i]);
 	}
+	printf("%d\n", res);
 	return (0);
 }
