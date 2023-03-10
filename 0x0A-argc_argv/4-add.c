@@ -14,22 +14,22 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("0\n");
+		printf("%d\n", res);
 	}
 	else if (argc == 2)
-		printf("%d\n0", argv[1]):
+		printf("%d\n", atoi(argv[1]));
 	else
 	{
-	for (i = 1; i < argc; i++)
-	{
-		if (*argv[i] < '0' || *argv[i] > '9')
+		for (i = 1; i < argc; i++)
 		{
-			printf("Error\n");
-			return (1);
-		}
+			if (*argv[i] < '0' || *argv[i] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		res += atoi(argv[i]);
+		}
+		printf("%d\n", res);
 	}
-	}
-	printf("%d\n", res);
 	return (0);
 }
