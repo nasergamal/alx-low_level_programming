@@ -20,6 +20,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	if (m <= 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	if (m > 25)
 		change(&m, &n, 25);
 	if (m > 10)
