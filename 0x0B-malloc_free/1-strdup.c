@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - takes a string and return a pointer to a space in memory
@@ -14,9 +15,9 @@ char *_strdup(char *str)
 
 	char *s;
 
-	s = malloc(sizeof(str));
+	s = malloc(strlen(str) * sizeof(char));
 	for (i = 0; str[i] != '\0'; i++)
 		s[i] = str[i];
-
+	s[i] = '\0';
 	return (s);
 }
