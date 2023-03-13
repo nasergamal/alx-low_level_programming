@@ -1,5 +1,5 @@
-#include <stdlib.h
->
+#include <stdlib.h>
+
 /**
  * _strdup - takes a string and return a pointer to a space in memory
  * which contains a copy of the string given as a parameter.
