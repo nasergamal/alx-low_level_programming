@@ -20,12 +20,12 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 		n += len(av[i]);
 	s = malloc((n + ac - 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		b = av[i];
 		for (m = 0; b[m] != '\0'; m++)
