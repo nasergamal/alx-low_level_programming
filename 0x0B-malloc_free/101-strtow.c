@@ -69,7 +69,7 @@ int cnt(char *d)
 {
 	int a, w = 0;
 
-	for (a = 0; a < len(d); a++)
+	for (a = 0; a <= len(d); a++)
 	{
 		if ((d[a] == ' ' || d[a] == '\0') && (d[a - 1] != ' ' && a))
 			w++;
