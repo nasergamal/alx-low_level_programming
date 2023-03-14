@@ -26,15 +26,17 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && str[i] != '\0')
 			wo++;
-		if ((str[i] == ' ' || str[i] == '\0') && (str[i - 1] != ' '))
+		if ((str[i] == ' ' || str[i] == '\0') && (str[i - 1] != ' ' && i))
 		{
-			s[c] = malloc((wo) * sizeof(char));
+			s[c] = malloc((wo + 1) * sizeof(char));
 			for (m = 0; m < wo; m++)
 				s[c][m] = str[i - wo + m];
+			s[c][m] = '\0';
 			c++;
 			wo = 0;
 		}
 	}
+	s[n] = NULL
 	return (s);
 }
 /**
