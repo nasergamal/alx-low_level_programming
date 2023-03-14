@@ -12,7 +12,7 @@ int cnt(char *d);
 
 char **strtow(char *str)
 {
-	int i, c = len(str), n = cnt(str), m = 0, wo = 0;
+	int i, c = 0, n = cnt(str), m = 0, wo = 0;
 
 	char **s;
 
@@ -22,7 +22,7 @@ char **strtow(char *str)
 	s = malloc((n + 1) * sizeof(char *));
 	if (*s == NULL)
 		return (s);
-	for (i = 0; i < c; i++)
+	for (i = 0; i < len(str); i++)
 	{
 		if (str[i] != ' ' && str[i] != '\0')
 			wo++;
@@ -41,12 +41,13 @@ char **strtow(char *str)
  * len - measure string length
  * @c: string
  *
- * return: length
+ * Return: length
  */
 
 int len(char *c)
 {
 	int a = 0;
+
 	if (c != NULL)
 	{
 		for (a = 0; c[a] != '\0' ; a++)
@@ -59,7 +60,7 @@ int len(char *c)
  * cnt - measure word count in string
  * @d: string
  *
- * return: count
+ * Return: count
  */
 
 int cnt(char *d)
