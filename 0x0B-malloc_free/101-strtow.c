@@ -20,7 +20,7 @@ char **strtow(char *str)
 		return (NULL);
 
 	s = malloc((n + 1) * sizeof(char *));
-	if (*s == NULL)
+	if (s == NULL)
 		return (s);
 	for (i = 0; i < len(str); i++)
 	{
