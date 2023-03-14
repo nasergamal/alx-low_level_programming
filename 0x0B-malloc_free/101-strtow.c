@@ -26,7 +26,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && str[i] != '\0')
 			wo++;
-		if ((str[i] == ' ' || str[i] == '\0') && (str[i - 1] != ' ') && i)
+		else if ((str[i] == ' ' || str[i] == '\0') && (str[i - 1] != ' ') && i)
 		{
 			s[c] = malloc((wo + 1) * sizeof(char));
 			for (m = 0; m < wo; m++)
