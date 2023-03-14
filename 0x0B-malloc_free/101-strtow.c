@@ -36,7 +36,7 @@ char **strtow(char *str)
 			wo = 0;
 		}
 	}
-	s[n] = NULL;
+	s[n + 1] = NULL;
 	return (s);
 }
 /**
