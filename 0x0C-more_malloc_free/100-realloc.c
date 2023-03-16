@@ -1,7 +1,5 @@
 #include <stdlib.h>
 
-void me(char *s, void *p, unsigned int o, unsigned int n);
-
 /**
  * _realloc - reallocate memory based on requirement
  * @ptr: pointer to already allocated memory
@@ -14,6 +12,8 @@ void me(char *s, void *p, unsigned int o, unsigned int n);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *s, *n;
+
+	unsigned int i;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -28,7 +28,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (s);
 	}
 	n = ptr;
-	for (i = 0; i < old_size && i < new_size, i++)
+	for (i = 0; i < old_size && i < new_size; i++)
 		s[i] = n[i];
 	free(ptr);
 	return (s);
