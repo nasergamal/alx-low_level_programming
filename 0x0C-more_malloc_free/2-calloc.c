@@ -1,5 +1,5 @@
 #include <stdlib.h>
-char *me(char *s, unsigned int n);
+void *me(char *s, unsigned int n);
 /**
  * _calloc - allocate memory set to zero
  * @nmemb: number of elements
