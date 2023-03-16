@@ -28,11 +28,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  *
  * Return: pointer
  */
-char *me(char *s, unsigned int n)
+void *me(char *s, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
 		s[i] = 0;
-	return (s);
 }
