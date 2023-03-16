@@ -18,3 +18,4 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (s == NULL) /* Redundant remove later*/
 		return (s);
 	return (s);
+}
