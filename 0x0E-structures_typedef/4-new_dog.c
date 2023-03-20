@@ -16,16 +16,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	int i, n, m;
 
-	if (!(name) || !(owner))
-		return (NULL);
 	for (n = 0; name[n] != '\0'; n++)
 		;
 	for (m = 0; owner[m] != '\0'; m++)
 		;
 	p = malloc(sizeof(dog_t));
+	if (p == NULL)
+	{
+		free(p);
+		return (NULL);
+	}
 	p->name =  malloc(n + 1);
 	p->owner =  malloc(m + 1);
-	if (p == NULL || p->name == NULL || p->owner == NULL)
+	if (p->name == NULL || p->owner == NULL)
 	{
 		free(p->name);
 		free(p->owner);
