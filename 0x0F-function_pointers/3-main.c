@@ -9,25 +9,24 @@
  * Return: 0
  */
 
-int main (int ac, char *av[])
+int main(int ac, char *av[])
 {
 	int n, m, r;
 
 	if (ac != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
-	if (get_op_func(av[2]) == NULL)
+	if (get_op_func(av[2]) == NULL || av[2][1])
 	{
 		printf("Error\n");
-		exit (99);
-        
+		exit(99);
 	}
- 	if ((*av[2] == '/' || *av[2] == '%') && atoi(av[3]) == 0)
+	if ((*av[2] == '/' || *av[2] == '%') && atoi(av[3]) == 0)
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 
 	n = atoi(av[1]);
