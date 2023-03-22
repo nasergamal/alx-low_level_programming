@@ -26,7 +26,7 @@ int main(int ac, char *av[])
 	}
 	for (i = 0; i < n; i++)
 	{
-		printf("%x", p[i] & 0xFF);
+		printf("%02x", p[i] & 0xFF);
 		if (i == n - 1)
 			break;
 		printf(" ");
