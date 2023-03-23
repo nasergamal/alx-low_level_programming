@@ -10,35 +10,41 @@
 
 void print_all(const char * const format, ...)
 {
-	int n = 0;
-	char *s, *se = "";
+	int i, n = 0, flag = 0;
+	char *s, fr[] = "csif";
 	va_list li;
 
 	va_start(li, format);
 	while (format[n] && format)
 	{
+		i = 0;
+		while (fr[i])
+		{
+			if (fr[i] == format[n] && flag)
+			{
+				printf(", ");
+				break; }
+			i++;
+		}
 		switch (format[n])
 		{
 		case 'c':
-			printf("%s%c", se, va_arg(li, int));
+			printf("%c", va_arg(li, int)), flag = 1;
 			break;
 		case 'i':
-			printf("%s%d", se, va_arg(li, int));
+			printf("%d", va_arg(li, int)), flag = 1;
 			break;
 		case 'f':
-			printf("%s%f", se, va_arg(li, double));
+			printf("%f", va_arg(li, double)), flag = 1;
 			break;
 		case 's':
-			s = va_arg(li, char *);
+			s = va_arg(li, char *), flag = 1;
 			if (!s)
-			{
-				printf("(nil)");
-				break; }
-			printf("%s%s", se, s);
+				s = "(nil)";
+			printf("%s", s);
 			break;
 		}
 		n++;
-		se = ", ";
 	}
 	printf("\n");
 	va_end(li);
