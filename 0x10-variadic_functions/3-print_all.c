@@ -11,11 +11,11 @@
 void print_all(const char * const format, ...)
 {
 	va_list li;
-	unsigned int i, n = 0, flag = 0;
+	unsigned int i, n = 0, flag = 0, m = strlen(format);
 	char *s, fr[] = "csif";
 
 	va_start(li, format);
-	while (format[n])
+	while (format[n] && i < m)
 	{
 		i = 0;
 		while (fr[i])
