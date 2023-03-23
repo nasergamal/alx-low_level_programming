@@ -10,15 +10,23 @@
 
 void print_all(const char * const format, ...)
 {
-	int n = 0;
+	int i, n = 0;
 
-	char *s;
+	char *s, fr[] = "csif";
 
 	va_list li;
 
 	va_start(li, format);
 	while (format[n] && format)
 	{
+		i = 0;
+		while (fr[i])
+		{
+			if (fr[i] == format[n] && n)
+				printf(", ");
+				break;
+			i++;
+		}
 		switch (format[n])
 		{
 		case 'c':
@@ -38,12 +46,6 @@ void print_all(const char * const format, ...)
 				break; }
 			printf("%s", s);
 			break; }
-		while ((format[n] == 'c' || format[n] == 'i'
-		|| format[n] == 'f' || format[n] == 's') && (format[n + 1]))
-		{
-			printf(", ");
-			break;
-		}
 		n++;
 	}
 	printf("\n");
