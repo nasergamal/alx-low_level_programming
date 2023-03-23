@@ -44,9 +44,9 @@ void print_all(const char * const format, ...)
 			printf("%s", s);
 			break;
 		default:
-			break;
+			n++
+			continue;
 		}
-		n++;
 	}
 	printf("\n");
 	va_end(li);
