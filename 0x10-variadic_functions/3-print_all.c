@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 	char *s, fr[] = "csif";
 
 	va_start(li, format);
-	while (format[n] && format)
+	while (format[n])
 	{
 		i = 0;
 		while (fr[i])
