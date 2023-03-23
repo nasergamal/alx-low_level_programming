@@ -41,13 +41,13 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			s = va_arg(li, char *), flag = 1;
-			if (s == NULL)
+			if (!s)
 			{
-				printf("nil");
+				printf("(nil)");
 				break; }
 			printf("%s", s);
 			break; }
-		n++;
-	}
+		n++; }
 	printf("\n");
+	va_end(li);
 }
