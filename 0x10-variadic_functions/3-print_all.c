@@ -12,7 +12,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int i, n = 0;
+	int n = 0;
 
 	char c, *s;
 
@@ -20,6 +20,8 @@ void print_all(const char * const format, ...)
 
 	va_list li;
 
+	if (format == NULL)
+		return;
 	va_start(li, format);
 	while (format[n])
 	{
@@ -30,8 +32,7 @@ void print_all(const char * const format, ...)
 			printf("%c", c);
 			break;
 		case 'i':
-			i = va_arg(li, int);
-			printf("%d", i);
+			printf("%d", va_arg(li, int));
 			break;
 		case 'f':
 			f = (float) va_arg(li, double);
@@ -44,12 +45,11 @@ void print_all(const char * const format, ...)
 				printf("nil");
 				break; }
 			printf("%s", s);
-			break;
-		}
-		if ((format[n] == 'c' || format[n] == 'i'
+			break; }
+		while ((format[n] == 'c' || format[n] == 'i'
 		|| format[n] == 'f' || format[n] == 's') && (format[n + 1]))
+		{
 			printf(" ");
-		n++;
-	}
-	printf("\n");
-}
+			break; }
+		n++; }
+	printf("\n"); }
