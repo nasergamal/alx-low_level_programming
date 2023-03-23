@@ -10,7 +10,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int i, n = 0, flag = 0;
+	unsigned int i, n = 0, flag = 0;
 	char *s, fr[] = "csif";
 	va_list li;
 
@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			s = va_arg(li, char *), flag = 1;
-			if (!s)
+			if (s == NULL)
 				s = "(nil)";
 			printf("%s", s);
 			break;
