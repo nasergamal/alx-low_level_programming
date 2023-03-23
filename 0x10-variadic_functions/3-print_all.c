@@ -23,8 +23,10 @@ void print_all(const char * const format, ...)
 		while (fr[i])
 		{
 			if (fr[i] == format[n] && n)
+			{
 				printf(", ");
 				break;
+			}
 			i++;
 		}
 		switch (format[n])
