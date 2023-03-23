@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 	char *s, fr[] = "csif";
 
 	va_start(li, format);
-	while (format[n] && i < m)
+	while (format[n] && (n < m))
 	{
 		i = 0;
 		while (fr[i])
@@ -42,10 +42,8 @@ void print_all(const char * const format, ...)
 			if (s == NULL)
 				s = "(nil)";
 			printf("%s", s);
-			break;
-		default:
-			n++;
-			continue;
+			break; }
+		n++;
 		}
 	}
 	printf("\n");
