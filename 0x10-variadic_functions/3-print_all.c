@@ -10,9 +10,9 @@
 
 void print_all(const char * const format, ...)
 {
+	va_list li;
 	unsigned int i, n = 0, flag = 0;
 	char *s, fr[] = "csif";
-	va_list li;
 
 	va_start(li, format);
 	while (format[n] && format)
@@ -42,6 +42,8 @@ void print_all(const char * const format, ...)
 			if (s == NULL)
 				s = "(nil)";
 			printf("%s", s);
+			break;
+		default:
 			break;
 		}
 		n++;
