@@ -11,9 +11,8 @@
 void print_all(const char * const format, ...)
 {
 	int i, n = 0, flag = 0;
-
-	char *s, fr[] = "csif";
-
+	char *s;
+	const char fr[] = "csif";
 	va_list li;
 
 	va_start(li, format);
