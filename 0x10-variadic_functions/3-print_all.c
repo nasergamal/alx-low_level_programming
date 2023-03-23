@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
-#include <string.h>
 /**
  * print_all - print given data
  * @format: the formats to be printed
@@ -12,11 +11,11 @@
 void print_all(const char * const format, ...)
 {
 	va_list li;
-	unsigned int i, n = 0, flag = 0, m = strlen(format);
+	unsigned int i, n = 0, flag = 0;
 	char *s, fr[] = "csif";
 
 	va_start(li, format);
-	while (format[n] && (n < m))
+	while (format && format[n])
 	{
 		i = 0;
 		while (fr[i])
