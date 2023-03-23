@@ -44,7 +44,7 @@ void print_all(const char * const format, ...)
 			printf("%s", s);
 			break;
 		default:
-			n++
+			n++;
 			continue;
 		}
 	}
