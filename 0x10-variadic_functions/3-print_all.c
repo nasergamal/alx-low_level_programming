@@ -46,6 +46,7 @@ void print_all(const char * const format, ...)
 		}
 		n++;
 	}
-	printf("\n");
+	if (flag == 1)
+		printf("\n");
 	va_end(li);
 }
