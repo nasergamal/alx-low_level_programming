@@ -13,7 +13,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *ptr;
 
 	if (!(head))
-		exit(98);
+		return (0);
 	i = count_nodes(head);
 	ptr = head;
 	if (i)
