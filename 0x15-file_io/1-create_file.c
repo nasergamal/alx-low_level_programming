@@ -10,12 +10,17 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fp, n;
+	int fp, n, i;
 
 	if (filename == NULL)
 		return (-1);
+	if (text_content != NULL)
+	{
+		for (i = 0; text_content[i];)
+			i++;
+	}
 	fp = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600);
-	n = dprintf(fp, "%s", text_content);
+	n = write(fp, text_content, i);
 	if ((fp == -1 || n == -1))
 		return (-1);
 	close(fp);
