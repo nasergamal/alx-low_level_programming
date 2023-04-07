@@ -11,7 +11,7 @@
 int main(int ac, char *av[])
 {
 	int fp1, fp2, n, f1, f2;
-	char buf[1024];
+	char *buf;
 
 	if (ac != 3)
 	{
@@ -19,6 +19,12 @@ int main(int ac, char *av[])
 		exit(97);
 	}
 	fp1 = open(av[1], O_RDONLY);
+	buf = malloc(sizeof(char) * 1024);
+	if (buf == NULL)
+	{
+		dprintf(STDERR_FILENO, "Can't write to %s\n", av[2]);
+		exit(99);
+	}
 	n = read(fp1, buf, 1024);
 	fp2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	do {
@@ -37,13 +43,11 @@ int main(int ac, char *av[])
 		n = read(fp1, buf, 1024);
 		fp2 = open(av[2], O_WRONLY | O_APPEND);
 	} while (n > 0);
-
 	f1 = close(fp1);
 	f2 = close(fp2);
 	if (f1 == -1 || f2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", (f1 == -1 ? fp1 : fp2));
 		exit(100);
-	}
-	return (0);
+	} return (0);
 }
