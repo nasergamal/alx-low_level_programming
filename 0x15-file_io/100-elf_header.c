@@ -29,7 +29,7 @@ void magic(unsigned char *e_ident)
 {
 	int i;
 
-	printf("  Magic:  ");
+	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x", e_ident[i]);
@@ -134,19 +134,19 @@ void type_entrypoint(unsigned int type, unsigned char *e_ident
 	switch (type)
 	{
 	case (ET_NONE):
-		printf("NONE (unknown type)\n");
+		printf("NONE (None)\n");
 		break;
 	case (ET_REL):
-		printf("REL (relocatable file)\n");
+		printf("REL (Relocatable file)\n");
 		break;
 	case (ET_EXEC):
-		printf("EXEC (executable file)\n");
+		printf("EXEC (Executable file)\n");
 		break;
 	case (ET_DYN):
-		printf("DYN (shared object)\n");
+		printf("DYN (Shared object file)\n");
 		break;
 	case (ET_CORE):
-		printf("CORE (core file)\n");
+		printf("CORE (Core file)\n");
 		break;
 	default:
 		printf("<unknown: %x>\n", type);
