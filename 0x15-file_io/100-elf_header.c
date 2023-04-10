@@ -111,7 +111,7 @@ void version_op(unsigned char *e_ident)
 		printf("ARM\n");
 		break;
 	case (ELFOSABI_STANDALONE):
-		printf("Stand-alone\n");
+		printf("Standalone App\n");
 		break;
 	default:
 		printf("<unknown: %x\n>", e_ident[EI_OSABI]);
