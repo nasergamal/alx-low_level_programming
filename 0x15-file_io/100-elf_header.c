@@ -134,7 +134,10 @@ void type_entrypoint(unsigned int type, unsigned char *e_ident
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		type >>= 8;
-		entry = __builtin_bswap64(entry);
+		if (e_ident[EI_CLASS] == ELFCLASS64)
+			entry = __builtin_bswap64(entry);
+		else if (e_ident[EI_CLASS] == ELFCLASS32)
+			entry = __builtin_bswap32(entry);
 	}
 	switch (type)
 	{
