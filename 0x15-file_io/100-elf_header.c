@@ -177,21 +177,19 @@ int main(int ac, char *av[])
 	Elf64_Ehdr *el;
 
 	if (ac != 2)
-		dprintf(STDERR_FILENO, "Usage: error in # of args\n"), exit(98);
-	el = malloc(sizeof(Elf64_Ehdr));
-	if (el == NULL)
-		dprintf(STDERR_FILENO, "error in allocate memory\n"), exit(98);
-	fp = open(av[1], O_RDONLY);
-	if (fp == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Usage: wrong number of args\n");
 		exit(98);
 	}
+	el = malloc(sizeof(Elf64_Ehdr));
+	if (el == NULL)
+		dprintf(STDERR_FILENO, "failed to allocate memory\n"), exit(98);
+	fp = open(av[1], O_RDONLY);
 	rd = read(fp, el, sizeof(Elf64_Ehdr));
 	if (fp == -1 || rd == -1)
 	{
 		free(el);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: failed to read from file %s\n", av[1]);
 		exit(98);
 	}
 	verify(el->e_ident);
@@ -201,5 +199,12 @@ int main(int ac, char *av[])
 	printf("  ABI Version:                       %i\n",
 		el->e_ident[EI_ABIVERSION]);
 	type_entrypoint(el->e_type, el->e_ident, el->e_entry);
+	cl = close(fp);
+	if (cl == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: falied to close file %i\n", fp);
+		exit(98);
+	}
+	free(el);
 	return (0);
 }
