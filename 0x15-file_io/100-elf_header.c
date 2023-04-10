@@ -131,6 +131,11 @@ void type_entrypoint(unsigned int type, unsigned char *e_ident
 		, unsigned long int entry)
 {
 	printf("  Type:                              ");
+	if (e_ident[EI_DATA] == ELFDATA2MSB)
+	{
+		type >>= 8;
+		entry = __builtin_bswap64(entry);
+	}
 	switch (type)
 	{
 	case (ET_NONE):
@@ -154,8 +159,6 @@ void type_entrypoint(unsigned int type, unsigned char *e_ident
 	}
 
 	printf("  Entry point address:               ");
-	if (e_ident[EI_DATA] == ELFDATA2MSB)
-		entry = __builtin_bswap64(entry);
 	if (e_ident[EI_CLASS] == ELFCLASS32)
 		printf("%#x\n", (unsigned int)entry);
 
