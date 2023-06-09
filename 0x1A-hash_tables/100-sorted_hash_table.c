@@ -24,6 +24,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (shash);
 }
 
+void sorted(shash_table_t *ht, shash_node_t *node);
 /**
  * shash_table_set - setup new key's node and add it to hash table (sorted)
  * @ht: hash table
@@ -47,63 +48,70 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 	node = malloc(sizeof(shash_node_t));
 	if (node == NULL)
-	{
-		free(valuec);
+	{	free(valuec);
 		return (0); }
 	node->key = malloc(sizeof(char) * (strlen(key) + 1));
-
-	node->value = valuec;
-	strcpy(node->key, key);
+	node->value = valuec, strcpy(node->key, key);
 	node->next = node->snext = node->sprev = NULL;
-
 	ptr = ht->array[index];
 	while (ptr)
 	{
 		if (!(strcmp(ptr->key, key)))
-		{
-			free(ptr->value);
+		{	free(ptr->value);
 			free(node->key);
-			ptr->value = valuec;
 			free(node);
+			ptr->value = valuec;
 			return (1); }
-		ptr = ptr->next;
-	}
+		ptr = ptr->next; }
 	node->next = ht->array[index];
 	ht->array[index] = node;
+	sorted(ht, node);
+	return (1);
+}
+
+/**
+ * sorted - add new node in a sorted manner
+ * @ht: hash table
+ * @node: new node
+ *
+ * Return: void
+ */
+
+void sorted(shash_table_t *ht, shash_node_t *node)
+{
+	shash_node_t *ptr = NULL;
+
 	ptr = ht->shead;
 	if (!ptr)
 		ht->shead = ht->stail = node;
 	else
 	{
-		if (strcmp(ptr->key, key) > 0)
+		if (strcmp(ptr->key, node->key) > 0)
 		{
 			ptr->sprev = node;
 			node->snext = ptr;
 			ht->shead = node;
-			return (1);
+			return;
 		}
 		while (ptr->snext)
 		{
-			if (strcmp(ptr->snext->key, key) > 0)
+			if (strcmp(ptr->snext->key, node->key) > 0)
 			{
 				ptr->snext->sprev = node;
 				node->snext = ptr->snext;
-				ptr->snext = node;
-				node->sprev = ptr;
-				return (1);
+				ptr->snext = node, node->sprev = ptr;
+				return;
 			}
 			if (!ptr->snext)
 				break;
 			ptr = ptr->snext;
 		}
 		if (!ptr->snext)
-		{
-			ptr->snext = node;
+		{       ptr->snext = node;
 			node->sprev = ptr;
 			ht->stail = node;
 		}
 	}
-	return (1);
 }
 
 /**
