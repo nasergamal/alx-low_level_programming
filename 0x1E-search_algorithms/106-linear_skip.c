@@ -22,7 +22,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	jump = start->express;
 	while (jump != NULL)
 	{
-		printf("Value checked array[%ld] = [%d]\n", jump->index, jump->n);
+		printf("Value checked at index [%ld] = [%d]\n", jump->index, jump->n);
 
 		if (jump->n < value && !jump->express)
 		{
@@ -40,7 +40,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		start->index, jump->index);
 	while (start)
 	{
-		printf("Value checked array[%ld] = [%d]\n", start->index, start->n);
+		printf("Value checked at index [%ld] = [%d]\n", start->index, start->n);
 		if (start->n == value)
 			return (start);
 		start = start->next;
